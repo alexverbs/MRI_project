@@ -65,9 +65,9 @@ You can currently view the front end application by runnign a live server from t
 
 ## Contributions
 
-Alex Verbesey 
-Reese Wolfe
-Kristina Schaufele
+- Alex Verbesey 
+- Reese Wolfe
+- Kristina Schaufele
 
 ---
 ### Future Improvements
