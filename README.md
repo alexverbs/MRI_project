@@ -48,3 +48,31 @@ You can install these dependencies using pip:
 
 ```bash
 pip install tensorflow numpy matplotlib
+```
+---
+
+### Important Note for Data Augmentation
+
+When running the mri_project_data_aug.ipynb notebook, use the data_aug folder to store the augmented images. This ensures that the original dataset remains unaltered, preventing unnecessary duplication or overfitting.
+
+---
+
+### Using the Web Application
+
+You can currently view the front end application by runnign a live server from the **`mri_website`** directory. The backend is coming in the future. 
+
+---
+
+## Contributions
+
+Alex Verbesey 
+Reese Wolfe
+Kristina Schaufele
+
+---
+### Future Improvements
+
+We plan to add a backend in the future to run our model. 
+
+Feel free to explore, modify, and extend our work. If you encounter any issues or have questions, please reach out to us. 😊
+
