@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumor Prediction</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Tumor Prediction</h1>
+        <p>
+            Hi! We are Alex, Reese, and Kristina. We are college students studying abroad in Copenhagen, Denmark, and have trained a neural 
+            network to predict if a brain tumor is present in an MRI image. Please upload an MRI image to see if a tumor is present.
+        </p>
+        <form id="uploadForm">
+            <input type="file" id="fileInput" accept="image/*" class="input-file">
+            <button type="button" class="btn" onclick="previewImage()">Upload</button>
+        </form>
+        <div id="preview-container" class="preview-container">
+            <div id="predictionContainer" class="prediction-container">
+                <h2>Prediction: </h2>
+                <p id="prediction">N/A</p>
+                <h2>Confidence Levels:</h2>
+                <ul>
+                    <li>Glioma: <span id="gliomaConfidence">N/A</span></li>
+                    <li>Meningioma: <span id="meningiomaConfidence">N/A</span></li>
+                    <li>No Tumor: <span id="noTumorConfidence">N/A</span></li>
+                    <li>Pituitary: <span id="pituitaryConfidence">N/A</span></li>
+                </ul>
+            </div>
+            <div id="imageBox" class="image-box">
+                <img id="previewImage" src="" alt="Image Preview">
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function previewImage() {
+            const fileInput = document.getElementById('fileInput');
+            const previewImage = document.getElementById('previewImage');
+            
+            // Check if a file is selected
+            if (fileInput.files && fileInput.files[0]) {
+                const file = fileInput.files[0];
+                const reader = new FileReader();
+
+                // Load the image and display it
+                reader.onload = function (e) {
+                    previewImage.src = e.target.result;
+                    previewImage.style.display = 'block';
+                };
+
+                reader.readAsDataURL(file);
+            } else {
+                alert('Please select an image to preview.');
+            }
+        }
+    </script>
+</body>
+</html>
