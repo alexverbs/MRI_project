@@ -38,7 +38,7 @@ The repository contains the following files and folders:
 
 ### Environment Setup
 
-Ensure you have the necessary Python libraries installed. These include but are not limited to:
+Ensure you have the necessary Python libraries installed.
 
 - TensorFlow/Keras
 - NumPy
